@@ -1,3 +1,4 @@
+
 import { NavLink, useLocation } from 'react-router-dom'
 
 const NAV_ITEMS = [
@@ -20,15 +21,20 @@ const PAGE_TITLES = {
 
 export function Layout({ children }) {
   const { pathname } = useLocation()
-  const title = PAGE_TITLES[pathname] || 'Healthcare Mortality Risk'
+  const title = PAGE_TITLES[pathname] || 'Healthcare Risk Prediction'
 
   return (
     <div className="min-h-screen bg-white flex">
       <aside className="w-60 shrink-0 border-r border-line bg-panel flex flex-col">
         <div className="px-5 py-5 border-b border-line">
-          <p className="text-base font-semibold text-ink leading-tight">Mortality Risk</p>
-          <p className="text-sm text-ink-soft leading-tight">Analytics &amp; prediction</p>
+          <p className="text-base font-semibold text-ink leading-tight">
+            Patient Health Risk
+          </p>
+          <p className="text-sm text-ink-soft leading-tight">
+            Predictions Using ML
+          </p>
         </div>
+
         <nav className="flex-1 px-3 py-4 space-y-0.5">
           {NAV_ITEMS.map((item) => (
             <NavLink
@@ -47,8 +53,12 @@ export function Layout({ children }) {
             </NavLink>
           ))}
         </nav>
+
         <div className="px-5 py-4 border-t border-line">
           <p className="text-xs text-ink-soft leading-relaxed">
+            Developed by: Arun Kumar Yadav
+          </p>
+          <p className="text-xs text-ink-soft leading-relaxed mt-2">
             Model outputs are statistical estimates, not medical diagnoses.
           </p>
         </div>

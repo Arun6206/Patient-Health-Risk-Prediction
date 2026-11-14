@@ -22,3 +22,15 @@ Thumbs.db
 # Logs and temp files
 *.log
 *.tmp
+
+# Firebase and local configuration
+google-services.json
+GoogleService-Info.plist
+local.properties
+.env.*
+!.env.example
+
+# Private keys and credentials
+*.pem
+*.key
+service-account*.json
